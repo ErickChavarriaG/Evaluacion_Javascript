@@ -96,12 +96,12 @@ var Calculadora = (function(){
 
   var reducirSize = function(elemento){
     //elemento.style.width = "18%";
-    alert('redicuiendo');
+    alert(elemento);
   }
 
   var ampliarSize = function(elemento){
     //elemento.style.width = "22%";
-    alert('ampliando');
+    alert(elemento);
   }
 
   return{
@@ -111,8 +111,8 @@ var Calculadora = (function(){
     agregarDecimal : agregarDecimal,
     agregarSigno : agregarSigno,
     Calcular : Calcular,
-    reducirSize : reducirSize,
-    ampliarSize : ampliarSize
+    reducirSize : reducirSize
+  //document.getElementById(tipoID).onclick = reducirSize()
 
   }
 
@@ -128,8 +128,7 @@ document.addEventListener("click", function(event){
 
   var tipoID = targetElement.id;
 
-  document.getElementById(tipoID).onclick = reducirSize();
-  //document.getElementById(tipoID).onclick = ampliarSize();
+  reducirSize(tipoID);
 
   switch(targetElement.id) {
     case "0":
