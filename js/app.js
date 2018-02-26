@@ -164,7 +164,7 @@ document.addEventListener("click", function(event){
       case "por":
         Calculadora.Calcular('*');
         break;
-      case "divido":
+      case "dividido":
         Calculadora.Calcular('/');
         break;
       case "igual":
