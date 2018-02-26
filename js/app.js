@@ -94,26 +94,13 @@ var Calculadora = (function(){
     }
   }
 
-  var reducirSize = function(elemento){
-    //elemento.style.width = "18%";
-    alert(elemento);
-  }
-
-  var ampliarSize = function(elemento){
-    //elemento.style.width = "22%";
-    alert(elemento);
-  }
-
   return{
     init : InicializarPantalla,
     validarCero : validarCero,
     agregarDigitos : agregarDigitos,
     agregarDecimal : agregarDecimal,
     agregarSigno : agregarSigno,
-    Calcular : Calcular,
-    reducirSize : reducirSize
-  //document.getElementById(tipoID).onclick = reducirSize()
-
+    Calcular : Calcular
   }
 
 })();
@@ -127,8 +114,6 @@ document.addEventListener("click", function(event){
   console.log(targetElement);
 
   var tipoID = targetElement.id;
-
-  reducirSize(tipoID);
 
   switch(targetElement.id) {
     case "0":
@@ -163,4 +148,138 @@ document.addEventListener("click", function(event){
       break;
   }
 
+});
+
+/* Modifica tamaño de cada tecla de la caluladora */
+document.getElementById('on').addEventListener("mousedown", function(){
+  document.getElementById('on').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('on').addEventListener("mouseout", function(){
+  document.getElementById('on').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('sign').addEventListener("mousedown", function(){
+  document.getElementById('sign').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('sign').addEventListener("mouseout", function(){
+  document.getElementById('sign').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('raiz').addEventListener("mousedown", function(){
+  document.getElementById('raiz').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('raiz').addEventListener("mouseout", function(){
+  document.getElementById('raiz').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('dividido').addEventListener("mousedown", function(){
+  document.getElementById('dividido').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('dividido').addEventListener("mouseout", function(){
+  document.getElementById('dividido').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('7').addEventListener("mousedown", function(){
+  document.getElementById('7').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('7').addEventListener("mouseout", function(){
+  document.getElementById('7').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('8').addEventListener("mousedown", function(){
+  document.getElementById('8').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('8').addEventListener("mouseout", function(){
+  document.getElementById('8').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('9').addEventListener("mousedown", function(){
+  document.getElementById('9').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('9').addEventListener("mouseout", function(){
+  document.getElementById('9').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('por').addEventListener("mousedown", function(){
+  document.getElementById('por').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('por').addEventListener("mouseout", function(){
+  document.getElementById('por').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('4').addEventListener("mousedown", function(){
+  document.getElementById('4').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('4').addEventListener("mouseout", function(){
+  document.getElementById('4').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('5').addEventListener("mousedown", function(){
+  document.getElementById('5').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('5').addEventListener("mouseout", function(){
+  document.getElementById('5').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('6').addEventListener("mousedown", function(){
+  document.getElementById('6').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('6').addEventListener("mouseout", function(){
+  document.getElementById('6').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('menos').addEventListener("mousedown", function(){
+  document.getElementById('menos').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('menos').addEventListener("mouseout", function(){
+  document.getElementById('menos').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('1').addEventListener("mousedown", function(){
+  document.getElementById('1').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('1').addEventListener("mouseout", function(){
+  document.getElementById('1').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('2').addEventListener("mousedown", function(){
+  document.getElementById('2').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('2').addEventListener("mouseout", function(){
+  document.getElementById('2').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('3').addEventListener("mousedown", function(){
+  document.getElementById('3').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('3').addEventListener("mouseout", function(){
+  document.getElementById('3').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('0').addEventListener("mousedown", function(){
+  document.getElementById('0').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('0').addEventListener("mouseout", function(){
+  document.getElementById('0').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('punto').addEventListener("mousedown", function(){
+  document.getElementById('punto').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('punto').addEventListener("mouseout", function(){
+  document.getElementById('punto').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('igual').addEventListener("mousedown", function(){
+  document.getElementById('igual').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('igual').addEventListener("mouseout", function(){
+  document.getElementById('igual').setAttribute("style","transform:scale(1,1)")
+});
+
+document.getElementById('mas').addEventListener("mousedown", function(){
+  document.getElementById('mas').setAttribute("style","transform:scale(0.95,0.95)")
+});
+document.getElementById('mas').addEventListener("mouseout", function(){
+  document.getElementById('mas').setAttribute("style","transform:scale(1,1)")
 });
