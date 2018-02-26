@@ -4,6 +4,8 @@ var Calculadora = (function(){
   var cantidadDigitos = 0;
   var valorEnPantalla = 0;
   var resultadoOperacion = 0;
+  var operador = "";
+  var operando2 = "";
   var cantidades = new Array();
 
   var InicializarPantalla = function(){
@@ -74,19 +76,44 @@ var Calculadora = (function(){
     switch(operacion) {
       case "+":
         resultadoOperacion = parseFloat(resultadoOperacion) + parseFloat(valorEnPantalla);
+        operador = "+"
         limparPantalla();
         console.log(resultadoOperacion);
         break;
         case "-":
-          Calculadora.init();
+          resultadoOperacion = parseFloat(resultadoOperacion) + parseFloat(valorEnPantalla);
+          operador = "-"
+          limparPantalla();
+          console.log(resultadoOperacion);
           break;
         case "*":
-          Calculadora.agregarDecimal('.');
+          resultadoOperacion = parseFloat(resultadoOperacion) + parseFloat(valorEnPantalla);
+          operador = "*"
+          limparPantalla();
+          console.log(resultadoOperacion);
           break;
         case "/":
-          Calculadora.agregarSigno();
+          resultadoOperacion = parseFloat(resultadoOperacion) + parseFloat(valorEnPantalla);
+          operador = "/"
+          limparPantalla();
+          console.log(resultadoOperacion);
           break;
         case "=":
+          operando2 = parseFloat(valorEnPantalla);
+          limparPantalla();
+          if(operador=="+"){
+            resultadoOperacion = parseFloat(resultadoOperacion) + parseFloat(operando2);
+          }else{
+            if(operador=="-"){
+              resultadoOperacion = parseFloat(resultadoOperacion) - parseFloat(operando2);
+            }else{
+              if(operador=="*"){
+                resultadoOperacion = parseFloat(resultadoOperacion) * parseFloat(operando2);
+              }else{
+                resultadoOperacion = parseFloat(resultadoOperacion) / parseFloat(operando2);
+              }
+            }
+          }
           asignarValorPantalla(resultadoOperacion);
           break;
       default:
