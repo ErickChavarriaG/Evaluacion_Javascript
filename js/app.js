@@ -94,33 +94,13 @@ var Calculadora = (function(){
     }
   }
 
-<<<<<<< HEAD
-=======
-  var reducirSize = function(elemento){
-    //elemento.style.width = "18%";
-    alert(elemento);
-  }
-
-  var ampliarSize = function(elemento){
-    //elemento.style.width = "22%";
-    alert(elemento);
-  }
-
->>>>>>> f957d2051449290a00d10b4609876525c7cc4388
   return{
     init : InicializarPantalla,
     validarCero : validarCero,
     agregarDigitos : agregarDigitos,
     agregarDecimal : agregarDecimal,
     agregarSigno : agregarSigno,
-<<<<<<< HEAD
     Calcular : Calcular
-=======
-    Calcular : Calcular,
-    reducirSize : reducirSize
-  //document.getElementById(tipoID).onclick = reducirSize()
-
->>>>>>> f957d2051449290a00d10b4609876525c7cc4388
   }
 
 })();
@@ -135,11 +115,6 @@ document.addEventListener("click", function(event){
 
   var tipoID = targetElement.id;
 
-<<<<<<< HEAD
-=======
-  reducirSize(tipoID);
-
->>>>>>> f957d2051449290a00d10b4609876525c7cc4388
   switch(targetElement.id) {
     case "0":
       Calculadora.validarCero(tipoID);
